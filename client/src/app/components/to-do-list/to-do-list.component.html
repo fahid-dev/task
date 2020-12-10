@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col-xs-12 col-md-6 col-md-offset-3">
+    <form #postForm="ngForm" (ngSubmit)="addTask(postForm.value)">
+      <h1 class="text-center">Add Item</h1>
+      <div class="form-group">
+        <label for="title">Item</label>
+        <textarea 
+        name="title" 
+        class="form-control"
+        required
+        ngModel
+        ></textarea>
+      </div>
+      <div class="form-group">
+        <label for="file">Upload Image</label>
+        <input 
+        class="form-control" 
+        name="file" 
+        type="file"
+        (change)='onFile($event)'>
+      </div>
+      <div class="form-group">
+        <label for="videoUrl">Enter url</label>
+        <input 
+        class="form-control" 
+        name="videoUrl" 
+        type="url"
+        ngModel>
+      </div>
+      <button
+        class="btn btn-primary"
+        type="submit"
+        [disabled]="!postForm.valid">
+        Save</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+button {
+    display: inline-block;
+    width: 150px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  input {
+    display: block;
+  }
+  dp-date-picker {
+    margin-top: 20px;
+  }
